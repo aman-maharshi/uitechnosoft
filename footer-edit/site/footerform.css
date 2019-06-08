@@ -1,0 +1,53 @@
+.subscribe {
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    padding: 1em;
+    text-align: center;
+    margin-bottom: 1em;
+    padding-bottom: 2em;
+    margin-top: -2em;
+}
+.subscribe form {
+    display: flex;
+    justify-content: center;
+}
+form > * {
+    font-size: 15px;
+    line-height: 35px;
+    border: 0;
+    border-radius: 5px;
+}
+form > *:first-child { /* form input*/
+    padding-left: 1em;
+    width: 300px;
+}
+form > *:last-child { /* form submit button*/
+    background: #0093dd;
+    margin-left: 1em;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+form > *:last-child:hover {
+    color: #343434;
+}
+@media (min-width: 992px) {
+    .subscribe  {
+        text-align: left;
+    }
+    .subscribe p {
+        font-size: 18px;
+    }
+    .subscribe form {
+        justify-content: flex-start;
+    }
+    form > * {
+        font-size: 16px;
+    }
+    form > *:first-child {
+        width: 500px;
+    }
+    form > *:last-child {
+        width: 100px;
+    }
+}

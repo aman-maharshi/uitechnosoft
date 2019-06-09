@@ -51,3 +51,16 @@ form > *:last-child:hover {
         width: 100px;
     }
 }
+/*
+    SERVICES COLUMN LAYOUT FIX
+*/
+@media (min-width: 768px) and (max-width: 1199px) {
+	#services .box {
+		max-width: 27.5%!important;
+	}
+}
+@media (min-width: 769px) and (max-width: 991px) {
+    .subscribe p {
+        font-size: 1.25em;
+    }
+}

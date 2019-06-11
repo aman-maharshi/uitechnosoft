@@ -1,0 +1,101 @@
+:root {
+    --blue: #0093dd;
+    --black:  #343434;
+}
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+.header {
+    font-size: 3em;
+    text-align: center;
+    margin-top: 1em;
+    color: var(--black);
+    text-shadow: 2px 4px 8px var(--blue);
+}
+.modal {
+    height: 100vh;
+    width: 100vw;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.modal-content {
+    background: white;
+    height: 200px;
+    width: 320px;
+    position: fixed;
+    top: 25%;
+    left: 20%;
+    z-index: 3;
+    font-size: 1.4rem;
+    padding: 1em;
+    color: var(--black);
+    background: lightyellow;
+    background: linear-gradient(to bottom right, #343434, #0093dd 60%);
+    box-shadow: 1px 2px 4px var(--black);
+    animation-name: modalOpen;
+    animation-duration: 1s;
+    color: white;
+}
+@keyframes modalOpen {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes modalClose {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+.modal-content span {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    cursor: pointer;
+    color: black;
+}
+.modal-content span:hover {
+    color: white;
+}
+.modal-content form > * {
+     font-size: 15px;
+     line-height: 25px;
+     padding: 0.3em;
+     border: 0;
+     box-shadow: 1px 2px 4px var(--black);
+}
+.modal-content form > *:first-child {
+    width: 170px;
+}
+.modal-content form > *:last-child {
+    cursor: pointer;
+    transition: 0.3s;
+    color: var(--black);
+    margin-left: 10px;
+}
+.modal-content form > *:last-child:hover {
+    background: var(--black);
+    color: white;
+}
+@media (min-width: 900px) {
+    .modal-content {
+        width: 420px;
+        left: 30%;
+    }
+    .modal-content form > *:first-child {
+        width: 300px;
+    }
+    .modal-content form > *:last-child {
+        margin-left: 20px;
+    }
+}

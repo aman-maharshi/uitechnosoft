@@ -8,14 +8,13 @@
 .modal {
     height: 100vh;
     width: 100vw;
-    border: 5px solid var(--blue-link);
-    /* overflow: auto; */
+    overflow: auto;
     background-color: rgba(0,0,0,0.6);
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
-    display: block;
+    display: none;
 }
 .modal-content {
     position: fixed;
@@ -28,13 +27,30 @@
     animation-name: modalOpen;
     animation-duration: 1s;
     border-radius: 0;
+    background: rgb(250, 250, 250);
+}
+@keyframes modalOpen {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes modalClose {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }
 .modal-content #cross {
     position: absolute;
     color: lightgray;
-    right: 15px;
+    right: 14px;
     top: 0;
-    font-size: 35px;
+    font-size: 30px;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -44,5 +60,48 @@
 
 .modal-content .heading {
     margin-top: 2em;
-    border: 1px solid black;
+}
+.modal-content .heading h1 {
+   text-transform: uppercase;
+   text-align: center;
+   color: black;
+   font-weight: bolder;
+   font-size: 2rem;
+   margin-bottom: 1em;
+}
+.modal-content .heading p {
+    font-size: 15px;
+    text-align: center;
+    width: 70%;
+    margin: auto;
+    color: rgb(143, 143, 143);
+}
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: auto;
+    margin-top: 2em;
+}
+.modal-content form > * {
+    text-align: center;
+    margin-bottom: 1em;
+    line-height: 3;
+    font-size: 1rem;
+}
+.modal-content form input[type=email] {
+    background: rgb(235, 235, 235);
+    border: 1px solid lightgray;
+    font-size: 0.9rem;
+}
+.modal-content form input[type=submit] {
+    text-transform: uppercase;
+    font-weight: bolder;
+    background: var(--black);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.modal-content form input[type=submit]:hover {
+    background: #000;
 }

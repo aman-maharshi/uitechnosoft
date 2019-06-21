@@ -132,7 +132,7 @@ a {
 #showcase {
     height: 100vh;
     background: var(--black-1);
-    background-image: url(right-bg.jpg);
+    background-image: url(./img/right-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
